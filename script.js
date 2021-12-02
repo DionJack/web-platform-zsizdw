@@ -16,7 +16,7 @@ function computerPlay() {
   // third element
   console.log(arr[2]); // 'scissors'
 }
-
+ 
 function playGame(playerSelection, computerSelection) {}
 
 playGame(playerSelection, computerSelection);

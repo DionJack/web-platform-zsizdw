@@ -5,7 +5,17 @@ let computerSelection = computerPlay();
 
 function computerPlay() {
   const arr = ['rock', 'paper', 'scissors'];
-  let randomNum = Math.floor(Math.random() * 3);
+  const randomArr = Math.floor(Math.random() * 3);
+  if (randomArr === 0) {
+    return 'rock';
+  } else if (randomArr === 1) {
+    return 'paper';
+  } else if (randomArr === 3) {
+    return 'scissors';
+  }
+  {
+    console.log(computerPlay());
+  }
 
   //first element
   console.log(arr[0]); // 'rock'
@@ -16,7 +26,7 @@ function computerPlay() {
   // third element
   console.log(arr[2]); // 'scissors'
 }
- 
+
 function playGame(playerSelection, computerSelection) {}
 
 playGame(playerSelection, computerSelection);

@@ -26,4 +26,3 @@ function playGame(playerSelection, computerSelection){
    }
   const computerSelection =computerPlay();
   console.log(playGame(playerSelection, computerSelection));
-  

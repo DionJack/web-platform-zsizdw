@@ -10,6 +10,20 @@ function computerPlay() {
 }
 console.log(computerSelection);
 
-function playGame(playerSelection, computerSelection) {}
 
-playGame(playerSelection, computerSelection);
+function playGame(playerSelection, computerSelection){
+  const determineWinner =(playerSelection,computerSelection)=>{
+  if (playerSelection ==='rock' && computerSelection ==='paper'){
+    console.log ("You Lose! Paper beats Rock");
+  }else if (playerSelection === 'rock' && computerSelection ==='scissors'){
+    console.log ("You Win! Rock beats Scissors");
+  }else if (playerSelection === 'paper' && computerSelection === 'rock'){
+      console.log ("You Lose! Paper beats rock");
+  }else playerSelection === 'scissors'&& computerSelection === 'paper'){
+    console.log ("You Win! Scissors beats Paper");
+  }else if (playerSelection === computerSelection ){
+    console.log ("Tie, repeat to break the tie"){
+   }
+  const computerSelection =computerPlay();
+  console.log(playGame(playerSelection, computerSelection));
+  

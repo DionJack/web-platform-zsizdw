@@ -10,19 +10,21 @@ function computerPlay() {
 }
 console.log(computerSelection);
 
+function playGame(playerSelection, computerSelection) {
+  if (playerSelection === 'rock' && computerSelection === 'paper')
+    console.log('You Lose!');
+  // if player  has rock they against paper they lose
+  else if (playerSelection === 'rock' && computerSelection === 'scissors')
+    console.log('You Win!');
+  // if player  has rock against scissors they win
+  else if (playerSelection === 'paper' && computerSelection === 'rock')
+    console.log('You Lose!');
+  // if player has paper against scissors  they lose
+  else if (playerSelection === 'scissors' && computerSelection === 'paper')
+    console.log('You Win!');
+  else if (playerSelection === computerSelection)
+    console.log('Tie, repeat to break the tie');
 
-function playGame(playerSelection, computerSelection){
-  const determineWinner =(playerSelection,computerSelection)=>{
-  if (playerSelection ==='rock' && computerSelection ==='paper'){
-    console.log ("You Lose! Paper beats Rock");
-  }else if (playerSelection === 'rock' && computerSelection ==='scissors'){
-    console.log ("You Win! Rock beats Scissors");
-  }else if (playerSelection === 'paper' && computerSelection === 'rock'){
-      console.log ("You Lose! Paper beats rock");
-  }else playerSelection === 'scissors'&& computerSelection === 'paper'){
-    console.log ("You Win! Scissors beats Paper");
-  }else if (playerSelection === computerSelection ){
-    console.log ("Tie, repeat to break the tie"){
-   }
-  const computerSelection =computerPlay();
-  console.log(playGame(playerSelection, computerSelection));
+  computerSelection = computerPlay();
+}
+console.log(playGame(playerSelection, computerSelection));

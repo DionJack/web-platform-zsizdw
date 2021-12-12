@@ -16,7 +16,6 @@
         compareInputs(pInput, cInput);
       });
     });
-
     function compareInputs(pInput, cInput) {
       const currentMatch = `${pInput} vs ${cInput}`;
 
@@ -28,8 +27,8 @@
 
       // Rock
       if (pInput === "Rock") {
-        if (cInput === "Scissors") {
-          alert(`${currentMatch} = You Win`);
+        else if (cInput === "Scissors") {
+        alert(`${currentMatch} = You Win`);
         } else {
           alert(`${currentMatch} = Computer Wins`);
         }

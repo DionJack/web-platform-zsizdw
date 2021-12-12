@@ -23,7 +23,7 @@ function playGame(playerSelection, computerSelection) {
   else if (playerSelection === 'scissors' && computerSelection === 'paper')
     console.log('You Win!');
   else if (playerSelection === computerSelection)
-  console.log('Tie, repeat to break the tie');
+  console.log ('Tie, repeat to break the tie');
   computerSelection = computerPlay();
 }
 option.addEventListener("click", function () {

@@ -27,4 +27,3 @@ function playGame(playerSelection, computerSelection) {
 
   computerSelection = computerPlay();
 }
-console.log(playGame(playerSelection, computerSelection));

@@ -23,8 +23,19 @@ function playGame(playerSelection, computerSelection) {
   else if (playerSelection === 'scissors' && computerSelection === 'paper')
     console.log('You Win!');
   else if (playerSelection === computerSelection)
-    console.log('Tie, repeat to break the tie');
-
+  console.log('Tie, repeat to break the tie');
   computerSelection = computerPlay();
 }
- 
+option.addEventListener("click", function () {
+  const pInput = this.value;
+
+  const cOptions = ["Rock", "Paper", "Scissors"];
+  const cInput = cOptions[Math.floor(Math.random() * 3)];
+  updateMoves(pInput, cInput);
+  compareInputs(pInput, cInput);
+  updateScore();
+  if (checkWinner()) {
+    pScore = cScore = 0;
+    updateScore();
+  }
+});

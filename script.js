@@ -32,7 +32,7 @@ let result;
 
     document.getElementById ('result').innerHTML= result ;
    }
-   const button =document.querySelectorAll ('input');
+   const buttons=document.querySelectorAll ('input');
 
    for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {

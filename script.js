@@ -10,32 +10,36 @@ function computerPlay() {
 }
 console.log(computerSelection);
 
-function playGame(playerSelection, computerSelection) {
-  if (playerSelection === 'rock' && computerSelection === 'paper')
-    console.log('You Lose!');
-  // if player  has rock they against paper they lose
-  else if (playerSelection === 'rock' && computerSelection === 'scissors')
-    console.log('You Win!');
-  // if player  has rock against scissors they win
-  else if (playerSelection === 'paper' && computerSelection === 'rock')
-    console.log('You Lose!');
-  // if player has paper against scissors  they lose
-  else if (playerSelection === 'scissors' && computerSelection === 'paper')
-    console.log('You Win!');
-  else if (playerSelection === computerSelection)
-  console.log ('Tie, repeat to break the tie');
-  computerSelection = computerPlay();
-}
-option.addEventListener("click", function () {
-  const pInput = this.value;
+computerSelection = computerPlay();
 
-  const cOptions = ["Rock", "Paper", "Scissors"];
-  const cInput = cOptions[Math.floor(Math.random() * 3)];
-  updateMoves(pInput, cInput);
-  compareInputs(pInput, cInput);
-  updateScore();
-  if (checkWinner()) {
-    pScore = cScore = 0;
-    updateScore();
+function playGame(playerSelection, computerSelection) {
+let result;
+  if (playerSelection === computerSelection)
+  console.log ('Tie, repeat to break the tie');
+  { else if (
+    (playerSelection === 'rock' && computerSelection === 'paper') ||
+    (playerSelection === 'paper' && computerSelection === 'scissors') ||
+    (playerSelection === 'scissors' && computerSelection === 'rock')
+  ) { 
+    result =Computer Choice ${ ComputerSelection } 
+    console.log ( 'You Lose');    
+   { computerSelection} beats ${playerSelection};
+
+   }else{ 
+    result= Computer Choice ${ ComputerSelection}
+    console.log ('You Win!')
+    {playerSelection} beats ${ computerSelection}
+
+    document.getElementById ('result').innerHTML= result ;
+   }
+   const button =document.querySelectorAll ('input');
+
+   for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      playGame(buttons[i].value, computerSelection);
+    });
   }
-});
+
+
+
+

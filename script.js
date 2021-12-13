@@ -8,9 +8,6 @@ function computerPlay() {
   let randomArr = Math.floor(Math.random() * 3);
   return arr[randomArr];
 }
-console.log(computerSelection);
-
-computerSelection = computerPlay();
 
 function playGame(playerSelection, computerSelection) {
 let result;

@@ -1,10 +1,10 @@
 
 // let playerSelection = prompt('Type your choice of rock, paper or scissors.');
 function computerPlay() {
-  let arr = ['rock', 'paper', 'scissors'];
+  const rps = ['rock', 'paper', 'scissors'];
 
   let randomArr = Math.floor(Math.random() * 3);
-  return arr[randomArr];
+  return rps[random];
 }
 
 let computerSelection = computerPlay();
@@ -12,7 +12,7 @@ let computerSelection = computerPlay();
 function playGame(playerSelection, computerSelection) {
 let result;
   if (playerSelection === computerSelection) {
-  result = 'Computer Choice ${Computer Selection} <br> Tie, repeat to break the tie';}  else if (
+  result = 'Computer Choice ${Computer Selection} <br> Tie, repeat to break the tie';} else if (
     (playerSelection === 'rock' && computerSelection === 'paper') ||
     (playerSelection === 'paper' && computerSelection === 'scissors') ||
     (playerSelection === 'scissors' && computerSelection === 'rock')
